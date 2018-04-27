@@ -9,6 +9,25 @@ class CashRegister {
     }
 
     public void process(Purchase purchase) {
-        printer.print(purchase.asString());
+        printer.print(format(purchase.asString()));
+    }
+
+    private String format(String purchaseText) {
+        return getHeader() + "\n"
+                + getDivider() + "\n"
+                + purchaseText + "\n"
+                + getFooter();
+    }
+
+    private String getDivider() {
+        return "-----------------------------";
+    }
+
+    private String getFooter() {
+        return "Thanks! Best wishes~";
+    }
+
+    private String getHeader() {
+        return "Welcome to Happy Life store~";
     }
 }
