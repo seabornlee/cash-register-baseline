@@ -16,6 +16,7 @@ class CashRegister {
         return getHeader() + "\n"
                 + getDivider() + "\n"
                 + purchaseText + "\n"
+                + getDivider() + "\n"
                 + getFooter();
     }
 
